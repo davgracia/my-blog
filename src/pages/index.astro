@@ -32,12 +32,33 @@ const work = await Promise.all(
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
-    <h4 class="animate font-semibold text-black dark:text-white">
-      Hola, soy David <span class="text-xl">👋🏻</span> 
-    </h4>
+
+    <section class="animate space-y-6">
+      <div class="flex flex-wrap gap-y-2 items-center justify-between">
+        <h5 class="font-semibold text-black dark:text-white">
+          Últimas publicaciones
+        </h5>
+        <Link href="/blog">
+          Ver todas
+        </Link>
+      </div>
+      <ul class="flex flex-col gap-4">
+        {blog.map(post => (
+          <li>
+            <ArrowCard entry={post} />
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <hr class="my-8 border-t-2 border-gray-200 dark:border-gray-700" />
+
     <div class="space-y-16">
       <section>
-        <article class="space-y-4">
+        <article class="space-y-4">    
+          <h4 class="animate font-semibold text-black dark:text-white">
+            Hola, soy David <span class="text-xl">👋🏻</span> 
+          </h4>
           <p class="animate">
             Soy un apasionado desarrollador de software con más de 10 años de experiencia.
             Me encanta trabajar con tecnologías como Node.js, React, Angular, Express.js y MongoDB,
@@ -58,24 +79,6 @@ const work = await Promise.all(
             Si necesitas ayuda con un proyecto o simplemente quieres compartir ideas, ¡estaré encantado de charlar!
           </p>
         </article>
-      </section>
-
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Últimas publicaciones
-          </h5>
-          <Link href="/blog">
-            Ver todas
-          </Link>
-        </div>
-        <ul class="flex flex-col gap-4">
-          {blog.map(post => (
-            <li>
-              <ArrowCard entry={post} />
-            </li>
-          ))}
-        </ul>
       </section>
 
       <section class="animate space-y-6">

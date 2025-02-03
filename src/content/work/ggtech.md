@@ -1,6 +1,6 @@
 ---
 company: "GGTech Entertainment"
-role: "Software Developer"
+role: "BackEnd Software Developer"
 dateStart: "01/01/2018"
 dateEnd: "11/27/2019"
 ---
