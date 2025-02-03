@@ -1,5 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import FormattedDate from "@components/FormattedDate.astro";
+import { readingTime } from "@lib/utils";
 
 type Props = {
   entry: CollectionEntry<"blog"> | CollectionEntry<"projects">;
@@ -13,7 +15,16 @@ const { entry } = Astro.props;
     <div class="font-semibold">
       {entry.data.title}
     </div>
-    <div class="text-sm">
+      <div class="flex items-center gap-1.5">
+        <div class="font-base text-sm">
+          <FormattedDate date={entry.data.date} />
+        </div>
+        &bull;
+        <div class="font-base text-sm">
+          {readingTime(entry.body)}
+        </div>
+      </div>
+    <div class="text-sm p-y-1">
       {entry.data.description}
     </div>
   </div>
