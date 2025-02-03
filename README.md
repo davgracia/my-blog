@@ -1,7 +1,5 @@
 # My Blog
 
-My Blog is a fork of Astro Nano blog theme.
-
 Built with Astro, Tailwind and Typescript.
 
 ## 📄 Configuration
