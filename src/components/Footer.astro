@@ -2,6 +2,9 @@
 import Container from "@components/Container.astro";
 import { SITE } from "@consts";
 import BackToTop from "@components/BackToTop.astro";
+import Link from "./Link.astro";
+
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="animate">
@@ -13,7 +16,7 @@ import BackToTop from "@components/BackToTop.astro";
     </div>
     <div class="flex justify-between items-center">
       <div>
-        &copy; 2024 {`|`} {SITE.NAME}
+        &copy; {currentYear} {`|`} {SITE.NAME} is a fork of <Link href="https://github.com/markhorn-dev/astro-nano" underline={false} external={true}>astro-nano</Link>
       </div>
       <div class="flex flex-wrap gap-1 items-center">
         <button

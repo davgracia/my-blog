@@ -33,32 +33,29 @@ const work = await Promise.all(
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <h4 class="animate font-semibold text-black dark:text-white">
-      Hi, I'm Nano <span class="text-xl">👋🏻</span> 
+      Hola, soy David <span class="text-xl">👋🏻</span> 
     </h4>
     <div class="space-y-16">
       <section>
         <article class="space-y-4">
           <p class="animate">
-            I am a minimal, seo friendly, accessible portfolio and blog for developers. 
-            I am an even more lightweight version of my popular theme
-            <Link href="https://github.com/markhorn-dev/astro-sphere" aria-label="Astro Sphere on Github" external>
-              Astro Sphere
-            </Link>.
-            I have a lighthouse scores of 100 across the board for performance, 
-            accesibility, best practices and SEO.
+            Un desarrollador de software con más de 10 años de experiencia creando aplicaciones
+            web y backend. Me encanta trabajar con Node.js, React, Angular, Express.js y MongoDB,
+            aunque son solo una parte del stack que domino. También tengo experiencia con otras
+            tecnologías que me permiten construir soluciones eficientes y escalables.
           </p>
           <p class="animate">
-            I come packed with full type safety, a sitemap, an rss feed, markdown 
-            and mdx support (use components in your markdown) through astro integrations.
-            I am styled with tailwind and come preconfigured with light, dark and 
-            system/os theme preferences out of the box.
+            A lo largo de los años, he participado en proyectos de todo tipo, desde pequeñas
+            aplicaciones hasta plataformas más complejas basadas en microservicios y autenticación
+            con OAuth2. Siempre busco desarrollar soluciones bien estructuradas, fáciles de mantener
+            y mejorar con el tiempo.
           </p>
           <p class="animate">
-            Visit
-            <Link href="https://github.com/markhorn-dev/astro-nano" aria-label="Astro Nano on Github" external>
-              Astro Nano on Github
-            </Link>
-            to fork the repository, read the docs or one-click deploy on Vercel or Netlify. 
+            Además, disfruto compartiendo lo que aprendo en mi blog, donde hablo sobre tecnología,
+            nuevas tendencias y los desafíos del desarrollo de software.
+          </p>
+          <p class="animate">
+            Si necesitas ayuda con un proyecto o simplemente quieres compartir ideas, ¡estaré encantado de charlar!
           </p>
         </article>
       </section>
@@ -66,10 +63,10 @@ const work = await Promise.all(
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
-            Latest posts
+            Últimas publicaciones
           </h5>
           <Link href="/blog">
-            See all posts
+            Ver todas
           </Link>
         </div>
         <ul class="flex flex-col gap-4">
@@ -84,10 +81,10 @@ const work = await Promise.all(
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
-            Work Experience
+            Experiencia
           </h5>
           <Link href="/work">
-            See all work
+            Ver todo
           </Link>
         </div>
         <ul class="flex flex-col space-y-4">
@@ -113,10 +110,10 @@ const work = await Promise.all(
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
-            Recent projects
+            Proyectos recientes
           </h5>
           <Link href="/projects">
-            See all projects
+            Ver todo
           </Link>
         </div>
         <ul class="flex flex-col gap-4">
@@ -130,25 +127,26 @@ const work = await Promise.all(
 
       <section class="animate space-y-4">
         <h5 class="font-semibold text-black dark:text-white">
-          Let's Connect
+          No dudes en contactarme
         </h5>
         <article>
           <p>
-            If you want to get in touch with me about something or just to say hi,
-            reach out on social media or send me an email.
+            Si alguna de mis reflexiones te resulta interesante, tienes alguna pregunta
+            o simplemente quieres charlar sobre desarrollo y tecnología, estaré encantado
+            de escucharte. No dudes en contactarme, siempre es un placer compartir ideas juntos. 🚀
           </p>
         </article>
         <ul class="flex flex-wrap gap-2">
           {SOCIALS.map(SOCIAL => (
             <li class="flex gap-x-2 text-nowrap">
-              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
+              <Link href={SOCIAL.HREF} external={true} aria-label={`${SITE.NAME} en ${SOCIAL.NAME}`}>
                 {SOCIAL.NAME}
               </Link>
               {"/"}
             </li>
           ))}
           <li class="line-clamp-1">
-            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`}>
+            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Correo electrónico ${SITE.NAME}`}>
               {SITE.EMAIL}
             </Link>
           </li>
