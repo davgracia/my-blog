@@ -1,7 +1,7 @@
 ---
 title: "Tamigo Shop Reporter"
 description: "Minimal portfolio and blog build with astro and no frameworks."
-date: "Feb 03 2025"
+year: 2025
 demoURL: ""
 repoURL: "https://github.com/davgracia/tamigo-shop-reporter"
 version: "0.0.1"

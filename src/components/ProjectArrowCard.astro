@@ -1,10 +1,9 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "@components/FormattedDate.astro";
-import { readingTime } from "@lib/utils";
 
 type Props = {
-  entry: CollectionEntry<"blog"> | CollectionEntry<"projects">;
+  entry: CollectionEntry<"projects">;
 }
 
 const { entry } = Astro.props;
@@ -17,18 +16,14 @@ const { entry } = Astro.props;
     </div>
       <div class="flex items-center gap-1.5">
         <div class="font-base text-sm">
-          <FormattedDate date={entry.data.date} />
-        </div>
-        &bull;
-        <div class="font-base text-sm">
-          {readingTime(entry.body)}
+          {entry.data.year}
         </div>
       </div>
       <div class="text-sm p-y-1">
         {entry.data.description}
       </div>
       <div class="flex gap-2 mt-2">
-        <span class="text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:text-green-300">v{entry.data.version}</span>
+        <span class="text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:text-green-300 border border-green-800 dark:border-green-300">v{entry.data.version}</span>
       </div>
   </div>
   <svg 
