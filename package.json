@@ -12,6 +12,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
+  "packageManager": "pnpm@7.0.0",
   "dependencies": {
     "@astrojs/check": "^0.5.9",
     "@astrojs/mdx": "^2.2.0",
