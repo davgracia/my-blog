@@ -33,10 +33,6 @@ const { Content } = await project.render();
         <div class="font-base text-sm">
           {project.data.year}
         </div>
-        &bull;
-        <div class="font-base text-sm">
-          {readingTime(project.body)}
-        </div>
       </div>
       <div class="animate text-2xl font-semibold text-black dark:text-white">
         {project.data.title}
@@ -45,7 +41,7 @@ const { Content } = await project.render();
         <nav class="animate flex gap-1">
           {project.data.demoURL && (
             <Link href={project.data.demoURL} external>
-              demo
+              Demo
             </Link>
           )}
           {project.data.demoURL && project.data.repoURL && (
@@ -53,14 +49,61 @@ const { Content } = await project.render();
           )}
           {project.data.repoURL && (
             <Link href={project.data.repoURL} external>
-              repo
+              Repositorio Git
             </Link>
           )}
         </nav>
       )}
     </div>
+
+    <div class="animate flex gap-2 mt-2">
+      {
+        project.data.technologies && project.data.technologies.map((tech) => (
+          <span class="text-black-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:text-white-300 border border-black-800 dark:border-white-300">
+          {tech}
+          </span>
+        ))
+      }
+    </div>
+
+    <hr class="animate my-8 border-t-2 border-gray-200 dark:border-gray-700" />
+
+    <div class="animate flex gap-2 mt-2">
+      <span class="text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:text-green-300 border border-green-800 dark:border-green-300">
+        {project.data.version}
+      </span>
+      {
+        project.data.maintened && (
+          <span class="text-black-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:text-white-300 border border-black-800 dark:border-white-300">
+            Mantenido
+          </span>
+        ) || (
+          <span class="text-black-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:text-white-300 border border-black-800 dark:border-white-300">
+            No mantenido
+          </span>
+        )
+      }
+      <span class="text-black-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:text-white-300 border border-black-800 dark:border-white-300">
+        {project.data.license}
+      </span>
+    </div>
+
     <article class="animate">
       <Content />
     </article>
+
+    <hr class="my-8 border-t-2 border-gray-200 dark:border-gray-700" />
+
+    <div class="flex gap-2 mt-2">
+      <button class="border border-black-800 dark:border-white-300 px-2.5 py-0.5 rounded-sm" onclick="window.open('https://x.com/intent/tweet?url=' + window.location.href, '_blank')">
+        X
+      </button>
+      <button class="border border-black-800 dark:border-white-300 px-2.5 py-0.5 rounded-sm" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + window.location.href, '_blank')">
+        Facebook
+      </button>
+      <button class="border border-black-800 dark:border-white-300 px-2.5 py-0.5 rounded-sm" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.href, '_blank')">
+        LinkedIn
+      </button>
+    </div>
   </Container>
 </PageLayout>

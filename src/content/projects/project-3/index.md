@@ -1,13 +1,13 @@
 ---
-title: "Tamigo Shop Reporter"
-description: "A tool to generate detailed reports from Tamigo CSV exports, focusing on tracking employee hours and shop activities."
-license: "GPL 3.0"
+title: "My Blog"
+description: "Minimal portfolio and blog build with astro and no frameworks."
+license: "MIT"
 year: 2025
 demoURL: ""
-repoURL: "https://github.com/davgracia/tamigo-shop-reporter"
+repoURL: "https://github.com/davgracia/my-blog"
 version: "0.0.1"
-maintened: true
-technologies: ["Node.JS", "Koa"]
+maintened: false
+technologies: ["Astro", "Markdown"]
 ---
 
 ## Overview

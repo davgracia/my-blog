@@ -45,5 +45,29 @@ const { Content } = await post.render();
     <article class="animate">
       <Content />
     </article>
+
+    <div class="flex gap-2 mt-2">
+      {
+        post.data.tags && post.data.tags.map((tag) => (
+          <span class="text-black-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:text-white-300 border border-black-800 dark:border-white-300">
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+
+    <hr class="my-8 border-t-2 border-gray-200 dark:border-gray-700" />
+
+    <div class="flex gap-2 mt-2">
+      <button class="border border-black-800 dark:border-white-300 px-2.5 py-0.5 rounded-sm" onclick="window.open('https://x.com/intent/tweet?url=' + window.location.href, '_blank')">
+        X
+      </button>
+      <button class="border border-black-800 dark:border-white-300 px-2.5 py-0.5 rounded-sm" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + window.location.href, '_blank')">
+        Facebook
+      </button>
+      <button class="border border-black-800 dark:border-white-300 px-2.5 py-0.5 rounded-sm" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.href, '_blank')">
+        LinkedIn
+      </button>
+    </div>
   </Container>
 </PageLayout>

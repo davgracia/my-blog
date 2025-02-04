@@ -1,10 +1,13 @@
 ---
 title: "Hedera API"
 description: "This project allows you to set up your own API server to interact with the Hedera network using the official Hedera SDK."
+license: "GPL 3.0"
 year: 2025
 demoURL: ""
 repoURL: "https://github.com/davgracia/hedera-api"
 version: "0.0.1"
+maintened: true
+technologies: ["Node.JS", "Express.JS"]
 ---
 
 Welcome to the Hedera API repository. This project allows you to set up your own API server to interact with the Hedera network using the official Hedera SDK. Please note that this is not the official Hedera API.

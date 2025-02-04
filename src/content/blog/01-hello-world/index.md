@@ -2,6 +2,7 @@
 title: "Hello world!"
 description: "Ya sabes..."
 date: "Feb 03 2025"
+tags: ["tag1", "tag2"]
 ---
 
 No podía empezar este blog sin un...

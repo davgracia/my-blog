@@ -5,4 +5,4 @@ dateStart: "01/20/2020"
 dateEnd: "05/31/2021"
 ---
 
-Iure illo neque tempora, voluptatem est quaerat voluptas praesentium ipsa dolorem dignissimos nulla ratione distinctio quae maiores eligendi nostrum? Quibusdam, debitis voluptatum, lorem ipsum dolor. Sit amet consectetur adipisicing elit.
+Mantenimiento desarrollo e implementación del ecosistema de herramientas internas y externas de la empresa.
