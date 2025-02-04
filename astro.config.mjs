@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: "https://davgracia.dev",
+  site: "https://davgracia.github.io",
+  base: 'my-blog',
   integrations: [mdx(), sitemap(), tailwind()],
 });
