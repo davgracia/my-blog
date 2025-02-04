@@ -4,6 +4,7 @@ description: "This project allows you to set up your own API server to interact 
 date: "Feb 01 2025"
 demoURL: ""
 repoURL: "https://github.com/davgracia/hedera-api"
+version: "0.0.1"
 ---
 
 Welcome to the Hedera API repository. This project allows you to set up your own API server to interact with the Hedera network using the official Hedera SDK. Please note that this is not the official Hedera API.

@@ -24,9 +24,12 @@ const { entry } = Astro.props;
           {readingTime(entry.body)}
         </div>
       </div>
-    <div class="text-sm p-y-1">
-      {entry.data.description}
-    </div>
+      <div class="text-sm p-y-1">
+        {entry.data.description}
+      </div>
+      <div class="flex gap-2 mt-2">
+        <span class="text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:text-green-300">v{entry.data.version}</span>
+      </div>
   </div>
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
